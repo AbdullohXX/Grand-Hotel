@@ -1,0 +1,494 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+button{
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.navbar{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 60px;
+    background-color: #1a142ac9;
+    z-index: 3;
+    transform:translateX(-400px);
+    transition: ease-in-out .3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.navbar h1{
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #d6a481;
+}
+.navbar input{
+    width: 250px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    margin-top: 35px;
+    background: none;
+    padding: 0px 30px 0px 15px;
+    color: white;
+}
+
+.navbar i{
+    color: grey;
+    width: 20px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 220px;
+    font-weight: 400;
+    color: #d6a481;
+}
+.navbar ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar ul li{
+    margin-bottom: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: ease .2s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.navbar ul li hr{
+    width: 0px;
+    display: none;
+}
+.navbar ul li:hover{
+    color: #d6a481;
+}
+.navbar ul li:hover hr{
+    display: flex;
+    width: 50px;
+    color: #d6a481;
+}
+.navbar.open{
+    transform: translateX(0px);
+}
+.menu{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    z-index: 4;
+}
+.menu .menu_con{
+    position: relative;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+    background-color: white;
+}
+.menu i{
+    cursor: pointer;
+}
+.menu i:last-child{
+    display: none;
+}
+.menu_icon{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu_icon.open i:first-child{
+    display: none;
+}
+.menu_icon.open i:last-child{
+    display: flex;
+}
+.menu_icon i{
+    font-size: 30px;
+    color: grey;
+}
+.social_icons{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.social_icons i{
+    font-size: 30px;
+    color: grey;
+}
+.year_name{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: grey;
+}
+/* ----------------------------------- */
+.main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 2;
+    overflow-y: scroll;
+}
+.welcome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../img/header-1.jpeg");
+}
+.welcome::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000091;
+    
+}
+.welcome .logo_site{
+    background: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: 1%;
+    top: 1%;
+}
+.welcome .logo_site img{
+    width: 5.1rem;
+}
+.welcome .logo_site p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #d6a481;
+}
+.welcome .main_word{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+.welcome .main_word .first{
+    font-size: 55px;
+    font-family: Josefin sans;
+}
+.welcome .main_word p{
+    font-size: 30px;
+    margin-top: 1.5rem;
+}
+.welcome .main_word button{
+    margin-top: 1.5rem;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: #FFC107;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: ease-in-out .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome .main_word button i{
+    margin-right: -10px;
+}
+.welcome .main_word button:hover{
+    background: none;
+    border:2px solid #FFC107;
+    color: #FFC107;
+}
+.welcome .main_word button:hover i:first-child{
+    transform: translateX(5px);
+    transition: ease .2s;
+}
+.welcome .main_word button:hover i:last-child{
+    transform: translateX(10px);
+    transition: ease .5s;
+}
+/* -------------------------------- */
+.main .about_us{
+    width: 100%;
+    height: 30rem;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+}
+.main .about_us .info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 90px;
+}
+.main .about_us .info h1{
+    font-size: 30px;
+    font-weight: 300;
+    color: #4b4b4b;
+    text-transform: uppercase;
+}
+.main .about_us .info hr{
+    width: 70px;
+    position: relative;
+    height: 2px;
+    background-color: #d6a481;
+    border:none;
+}
+.main .about_us .info .second{
+    width: 150px;
+    height: 2.5px;
+    margin-top: -19px;
+    background-color: #d6a481;
+}
+.main .about_us .info p {
+    font-size: 25px;
+    color: #d6a481;
+    letter-spacing: 2px;
+}
+.main .about_us .info .lorem{
+    font-size: 15px;
+    text-align: center;
+    color: #4b4b4b;
+
+}
+.main .about_us .info button{
+    border: 1px solid #d6a481;
+    color: #d6a481;
+    width: 170px;
+    height: 35px;
+    background: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat,sans-serif;
+    transition: ease-in-out .2s;
+}
+.main .about_us .info button i{
+    margin-right: -10px;
+}
+.main .about_us .info button:hover{
+    letter-spacing: 1.5px;
+}
+.main .about_us .info button:hover i:first-child{
+    transform: translateX(5px);
+    transition: ease .2s;
+}
+.main .about_us .info button:hover i:last-child{
+    transform: translateX(10px);
+    transition: ease .5s;
+}
+/*---------------------------*/
+.main .about_us .images{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.main .about_us .images img{
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    border: 1px solid #d6a481;
+}
+.main .about_us .images .first{
+    top: 28%;
+    left: 40%;
+    box-shadow: 2px 7px 17px 1px #746d6d;
+}
+.main .about_us .images .second{
+    top: 33%;
+    left: 25%;
+    box-shadow: -2px 8px 20px 0px #746d6d;
+}
+.main .about_us .images .third{
+    top: 39%;
+    left: 31%;
+    box-shadow: -2px 8px 20px 0px #0000008c;
+}
+.main .about_us .images .fourth{
+    top: 45%;
+    left: 37%;
+    box-shadow: -2px 8px 20px 0px #0000008c;
+}
+/*-----------------------------------*/
+
+.trending_rooms{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.trending_rooms hr{
+    width: 70px;
+    position: relative;
+    height: 2px;
+    background-color: #d6a481;
+    border:none;
+    margin-top: 2rem;
+}
+.trending_rooms .second{
+    width: 150px;
+    height: 2.5px;
+    margin-top: -19px;
+    background-color: #d6a481;
+}
+.trending_rooms .room_container{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 280px;
+    background-color: #000000e6;
+    box-shadow: 0px 0px 20px 0px #00000063;
+    transition: ease .3s;
+}
+.trending_rooms .row{
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.trending_rooms .room_container img{
+    width: 100%;
+}
+.trending_rooms .row .room_container .bio{
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 10px;
+    flex-direction: column;
+}
+.trending_rooms .row .room_container .bio h1{
+    font-size: 15px;
+    font-weight: 400;
+}
+.trending_rooms .row .room_container .bio p{
+    font-size: 10px;
+    margin-top: 12px;
+}
+.trending_rooms .row .room_container .cost{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.trending_rooms .row .room_container .btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 10px;
+}
+.trending_rooms .row .room_container .btn button{
+    width: 120px;
+    height: 30px;
+    border: 1px solid #b64b00;
+    border-radius: 20px;
+    background: none;
+    color: #b64b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.trending_rooms .row .room_container .btn i{
+    margin-right: -5px;
+}
+.trending_rooms .row .room_container .btn button:hover i:first-child{
+    transform: translateX(5px);
+    transition: ease .2s;
+}
+.trending_rooms .row .room_container .btn button:hover i:last-child{
+    transform: translateX(10px);
+    transition: ease .5s;
+}
+.trending_rooms button:last-child{
+    border: 1px solid #d6a481;
+    color: #d6a481;
+    width: 170px;
+    height: 40px;
+    background: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Montserrat,sans-serif;
+    transition: ease-in-out .2s;
+    margin-top: 20px;
+}
+.trending_rooms button:last-child i:first-child{
+    margin-top: -3px;
+}
+.trending_rooms button:last-child i:last-child{
+    margin-top: -10px;
+}
+.trending_rooms button:last-child:hover{
+    letter-spacing: 1.5px;
+    height: 50px;
+}
+.trending_rooms button:last-child:hover i:first-child{
+    transform: translateY(3px);
+    transition: ease .2s;
+}
+.trending_rooms button:last-child:hover i:last-child{
+    transform: translateY(5px);
+    transition: ease .5s;
+}
+
