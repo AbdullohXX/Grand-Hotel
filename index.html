@@ -30,6 +30,7 @@
         </div>
         
     </nav>
+
     <div class="navbar" id="navbar">
             <h1>Grand Hotel</h1>
             <input type="text" name="search" placeholder="Search...">
@@ -42,7 +43,7 @@
                 <li><hr>Costumers<hr></li>
                 <li><hr>Contact<hr></li>
             </ul>
-        </div>
+    </div>
 
     <div class="main">
         <section class="welcome" id="welcome">
@@ -152,15 +153,54 @@
             </button>
         </section>
 
-    </div>
-    <script type="text/javascript">
-        const a = document.getElementById('menu');
-        const b = document.getElementById('navbar');
+        <section class="our_costumers">
+            <header>
+                <p>Our Costumers</p>
+                <hr>
+                <hr class="second">
+            </header>
+            <p class="lorem_header">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus consectetur dolores molestias nostrum atque, magni mollitia nobis maiores expedita, voluptatum at debitis aliquid vero, nihil doloribus beatae reprehenderit neque.
+            </p>
+            <div class="comments">
+                <div class="left">
+                    <img src="/img/customer-1.jpeg">
+                    <div class="comment">
+                        <p class="costumer_name">
+                            Helen Doe
+                        </p>
+                        <p class="costumer_feeling">
+                            Happy Costumer
+                        </p>
+                        <p class="lorem">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium expedita facere molestiae rem? Quia, sit suscipit? Inventore, cupiditate ipsam ad ex velit dolores, iste animi assumenda sed dignissimos"
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="/img/customer-2.jpeg">
+                    <div class="comment">
+                        <p class="costumer_name">
+                            Monica Smith
+                        </p>
+                        <p class="costumer_feeling">
+                            Happy Costumer
+                        </p>
+                        <p class="lorem">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium expedita facere molestiae rem? Quia, sit suscipit? Inventore, cupiditate ipsam ad ex velit dolores, iste animi assumenda sed dignissimos"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        a.onclick=function() {
-            a.classList.toggle("open");
-            b.classList.toggle("open");
-        }
-    </script>
+        <section class="footer">
+            <div class="grand_hotel">
+                
+            </div>
+        </section>
+    </div>
+
+<script src="app.js"></script>
 </body>
 </html>

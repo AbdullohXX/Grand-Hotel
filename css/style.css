@@ -117,7 +117,7 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 4;
-    background-color: white;
+    background-color: #eeeeee;
 }
 .menu i{
     cursor: pointer;
@@ -152,7 +152,7 @@ body {
     padding: 10px;
 }
 .social_icons i{
-    font-size: 30px;
+    font-size: 25px;
     color: grey;
 }
 .year_name{
@@ -369,7 +369,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-.trending_rooms hr{
+hr{
     width: 70px;
     position: relative;
     height: 2px;
@@ -377,10 +377,10 @@ body {
     border:none;
     margin-top: 2rem;
 }
-.trending_rooms .second{
+.second{
     width: 150px;
     height: 2.5px;
-    margin-top: -19px;
+    margin-top: -15px;
     background-color: #d6a481;
 }
 .trending_rooms .room_container{
@@ -494,4 +494,77 @@ body {
     transform: translateY(5px);
     transition: ease .5s;
 }
+/* ------------------------------------------- */
 
+.our_costumers{
+    width: 100%;
+    position: relative;
+    background-color: #15141a;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.our_costumers header{
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.our_costumers header hr{
+    background-color: #b64b00;
+    height: 1px;
+}
+.our_costumers header p{
+    color: #b64b00;
+    font-size: 30px;
+}
+.our_costumers .lorem_header{
+    width: 700px;
+    text-align: center;
+    color: #ababab;
+    font-size: 12px;
+    margin: 40px;
+}
+.our_costumers .comments{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+    flex-direction: row;
+}
+.our_costumers .comments div{
+    /* height: 130px;*/
+    width: 500px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0 10px 0px;
+
+}
+.our_costumers .comments div img{
+    width: 140px;
+    margin-left: -10px;
+}
+.our_costumers .comments div .comment{
+    width: calc(100% - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px 0 15px;
+}
+.our_costumers .comments div .comment .costumer_feeling{
+    font-size: 13px;
+    color: #f4adab;
+    margin: 5px 0 5px 0;
+}
+.our_costumers .comments div .comment .lorem{
+    font-size: 10px;
+    font-style: italic;
+}
