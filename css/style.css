@@ -228,7 +228,7 @@ body {
     margin-top: 1.5rem;
     width: 150px;
     height: 35px;
-    border: none;
+    border: 2px solid #FFC107;
     background-color: #FFC107;
     border-radius: 15px;
     font-size: 15px;
@@ -244,7 +244,6 @@ body {
 }
 .welcome .main_word button:hover{
     background: none;
-    border:2px solid #FFC107;
     color: #FFC107;
 }
 .welcome .main_word button:hover i:first-child{
