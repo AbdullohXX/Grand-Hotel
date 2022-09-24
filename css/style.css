@@ -83,6 +83,9 @@ body {
 .navbar ul li hr{
     width: 0px;
     display: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: ease-in-out .3s;
 }
 .navbar ul li:hover{
     color: #d6a481;
@@ -119,7 +122,7 @@ body {
 .menu i{
     cursor: pointer;
 }
-.menu i:last-child{
+.menu .menu_icon i:last-child{
     display: none;
 }
 .menu_icon{
@@ -445,18 +448,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     font-size: 12px;
 }
+
 .trending_rooms .row .room_container .btn i{
     margin-right: -5px;
 }
 .trending_rooms .row .room_container .btn button:hover i:first-child{
     transform: translateX(5px);
-    transition: ease .2s;
+    transition: ease-in-out .2s;
 }
 .trending_rooms .row .room_container .btn button:hover i:last-child{
     transform: translateX(10px);
-    transition: ease .5s;
+    transition: ease-in-out .5s;
 }
 .trending_rooms button:last-child{
     border: 1px solid #d6a481;
@@ -473,21 +478,20 @@ body {
     transition: ease-in-out .2s;
     margin-top: 20px;
 }
-.trending_rooms button:last-child i:first-child{
-    margin-top: -3px;
+.trending_rooms .button:last-child i:first-child{
+    margin-top: -5px;
 }
-.trending_rooms button:last-child i:last-child{
+.trending_rooms .button:last-child i:last-child{
     margin-top: -10px;
 }
-.trending_rooms button:last-child:hover{
-    letter-spacing: 1.5px;
+.trending_rooms .button:last-child:hover{
     height: 50px;
 }
-.trending_rooms button:last-child:hover i:first-child{
+.trending_rooms .button:last-child:hover i:first-child{
     transform: translateY(3px);
     transition: ease .2s;
 }
-.trending_rooms button:last-child:hover i:last-child{
+.trending_rooms .button:last-child:hover i:last-child{
     transform: translateY(5px);
     transition: ease .5s;
 }
